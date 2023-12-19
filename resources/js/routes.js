@@ -1,5 +1,7 @@
 import Accueil from './components/accueil.vue';
 import viewChambre from './components/chambres/viewChambre.vue';
+import addChambre from './components/chambres/addChambre.vue';
+import editChambre from './components/chambres/editChambre.vue';
 
 export const routes = [
     {
@@ -9,7 +11,20 @@ export const routes = [
     },
     {
         name: viewChambre,
-        path: '/chambre',
+        path: '/listchambre',
         component: viewChambre
         }
+        ,
+    {
+        name: addChambre,
+        path: '/Addchambre',
+        component: addChambre
+        }
+        ,
+        {
+            name: editChambre,
+            path: '/Editchambre',
+            component: editChambre
+            }
+
     ];
