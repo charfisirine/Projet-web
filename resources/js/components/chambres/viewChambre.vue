@@ -1,79 +1,75 @@
 <template>
-    <div>
-    <div class="py-6">
-    <table class="table table-striped shadow">
-    <thead>
-    <tr>
-    <th>type</th>
-    <th>Disponibilité</th>
-    <th>Description Chambre</th>
-    <th>Numero Chambre</th>
-    <th>Prix par nuit</th>
-    <th>Modifier</th>
-    <th>Supprimer</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr v-for="chambre in chambres" :key="chambre.id">
-        <td>{{ chambre.type }}</td>
-        <td>{{ chambre.Disponibilite }}</td>
-        <td>{{ chambre.descriptionchambre }}</td>
-        <td>{{ chambre.numchambre }}</td>
-        <td>{{ chambre.prixnuit }}</td>
-        <td><button class="btn btn-warning mx-2">Modifier</button></td>
-        <td><button class="btn btn-danger mx-2" @click="deletechambre(chambre.id)">Supprimer</button></td>
-    </tr>
-    </tbody>
-    </table>
-
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card border-0">
+            <div class="card-body p-1">
+              <div class="table-responsive">
+                <table class="table table-sm align-items-center table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th class="align-middle">Type</th>
+                      <th class="align-middle">Disponibilité</th>
+                      <th class="align-middle">Description Chambre</th>
+                      <th class="align-middle">Numero Chambre</th>
+                      <th class="align-middle">Prix par nuit</th>
+                      <th class="align-middle text-center text-sm">Modifier</th>
+                      <th class="align-middle text-center text-sm">Supprimer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="chambre in chambres" :key="chambre.id">
+                      <td class="text-xs font-weight-bold mb-0">{{ chambre.type }}</td>
+                      <td class="align-middle text-center text-sm">{{ chambre.Disponibilite }}</td>
+                      <td class="text-xs font-weight-bold mb-0">{{ chambre.descriptionchambre }}</td>
+                      <td class="align-middle text-center text-sm">{{ chambre.numchambre }}</td>
+                      <td class="align-middle text-center text-sm">{{ chambre.prixnuit }}</td>
+                      <td class="text-xs font-weight-bold mb-0"><button class="btn btn-warning mx-2">Modifier</button></td>
+                      <td class="text-xs font-weight-bold mb-0"><button class="btn btn-danger mx-2" @click="deleteChambre(chambre.id)">Supprimer</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </template>
-    <script setup>
-    // Import des utilitaires depuis Vue
-    import { ref, onMounted } from 'vue';
-    import axios from 'axios';
+  </template>
 
-    // Création d'une variable réactive pour stocker les données des chambres
-    const chambres = ref([]);
+  <script setup>
+  import { ref, onMounted } from 'vue';
+  import axios from 'axios';
 
-    // Fonction asynchrone pour récupérer les données des chambres depuis l'API
-    const getchambres = async () => {
-        try {
-            // Requête GET pour récupérer les données des chambres depuis l'API
-            const response = await axios.get("http://localhost:8000/api/chambres");
+  const chambres = ref([]);
 
-            // Mise à jour de la variable réactive avec les données récupérées
-            chambres.value = response.data;
+  const getchambres = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/api/chambres");
+      chambres.value = response.data;
+      console.log(chambres.value);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-            // Affichage des données récupérées dans la console
-            console.log(chambres.value);
-        } catch (error) {
-            // Gestion des erreurs en cas de problème avec la requête
-            console.log(error);
-        }
-    };
+  onMounted(() => {
+    getchambres();
+  });
 
-    // Hook onMounted pour exécuter une action lorsque le composant est monté
-    onMounted(() => {
-        // Appel de la fonction pour récupérer les chambres lors du montage du composant
-        getchambres();
-    });
+  const deleteChambre = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8000/api/chambres/${id}`);
+      getchambres();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  </script>
 
-    // Fonction pour supprimer une chambre en fonction de son ID
-    const deletechambre = async (id) => {
-        try {
-            // Requête DELETE pour supprimer une chambre spécifique en fonction de son ID
-            await axios.delete(`http://localhost:8000/api/chambres/${id}`);
-
-            // Après la suppression, récupérer à nouveau les chambres pour mettre à jour la liste
-            getchambres();
-        } catch (error) {
-            // Gestion des erreurs en cas de problème avec la requête de suppression
-            console.log(error);
-        }
-    };
-    </script>
-
-    <style lang="scss" scoped>
-    </style>
+  <style lang="scss" scoped>
+  /* Ajoutez vos styles spécifiques ici si nécessaire */
+  .container {
+    margin-top: 20px;
+  }
+  </style>
