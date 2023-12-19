@@ -1,49 +1,27 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\Models\Payment;
 use Illuminate\Http\Request;
-
+use Stripe\Stripe;
+use Stripe\Charge;
 class PaymentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+public function createPaymentIntent(Request $request)
+{
+// Set your secret Stripe key
+Stripe::setApiKey(env('STRIPE_SECRET')); // STRIPE_SECRET eli 7atitou f .env t3ayatlou
+try { // Create a PaymentIntent
+$charge = Charge::create([
+'amount' => $request->input('amount'), // Le montant à payer en cents (100 = 1 dollar)
+'currency' => 'usd', // La devise
+'source' => $request->input('token'), //Le token Stripe de la carte de crédit
+'description' => 'Paiement via Stripe', // Description facultative
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Payment $payment)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Payment $payment)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Payment $payment)
-    {
-        //
-    }
+]);
+// Le paiement a réussi
+return response()->json(['message' => 'Paiement réussi']);
+}
+catch (\Exception $e) {
+return response()->json(['error' => $e->getMessage()], 400);
+}
+}
 }
