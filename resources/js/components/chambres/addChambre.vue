@@ -2,14 +2,25 @@
     <div className="col-md-6 offset-md-3 border rounded p-4 mt-2
     shadow">
         <form @submit.prevent="addChambre">
+            
             <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <input type="text" class="form-control" id="type" v-model="chambre.type">
+            <select class="form-select" id="type" v-model="chambre.type">
+                <option value="Simple">Simple</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+                <option value="Familiale">Familiale</option>
+            </select>
             </div>
+
             <div class="mb-3">
-            <label for="Disponibilite" class="form-label">Disponibilité</label>
-            <input type="text" class="form-control" id="Disponibilite" v-model="chambre.Disponibilite">
+                <label for="Disponibilite" class="form-label">Disponibilité</label>
+                <select class="form-select" id="Disponibilite" v-model="chambre.Disponibilite">
+                    <option value="Disponible">Disponible</option>
+                    <option value="Non disponible">Non disponible</option>
+                </select>
             </div>
+
             <div class="mb-3">
             <label for="descriptionchambre" class="form-label">Description Chambre</label>
             <input type="text" class="form-control" id="descriptionchambre" v-model="chambre.descriptionchambre">

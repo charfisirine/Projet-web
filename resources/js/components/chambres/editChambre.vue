@@ -1,64 +1,90 @@
 <template>
-Chambre
     <div>
-    <h3 class="text-center">Edit Chambre</h3>
-    <div class="row">
-    <div class="col-md-6">
-
-    <form @submit.prevent="updateChambre">
-            <div class="form-group">
-            <label>Type</label>
-            <input type="text" class="form-control"  v-model="chambre.type">
+      <!-- Titre -->
+      <h3 class="text-center mt-4 mb-4">Modifier Chambre</h3>
+  
+      <!-- Formulaire -->
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form @submit.prevent="updateChambre" class="border p-4">
+            <!-- Champ Type -->
+            <div class="mb-3">
+              <label for="type" class="form-label">Type</label>
+              <select class="form-select" v-model="chambre.type">
+                <option value="Simple">Simple</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+                <option value="Familiale">Familiale</option>
+              </select>
             </div>
-
-            <div class="form-group">
-            <label>Disponibilité</label>
-            <input type="text" class="form-control" id="Disponibilite" v-model="chambre.Disponibilite">
+  
+            <!-- Champ Disponibilité -->
+            <div class="mb-3">
+              <label for="Disponibilite" class="form-label">Disponibilité</label>
+              <select class="form-select" v-model="chambre.Disponibilite">
+                <option value="Disponible">Disponible</option>
+                <option value="Non disponible">Non disponible</option>
+              </select>
             </div>
-            <div class="form-group">
-            <label>Description Chambre</label>
-            <input type="text" class="form-control"  v-model="chambre.descriptionchambre">
+  
+            <!-- Champ Description Chambre -->
+            <div class="mb-3">
+              <label for="descriptionchambre" class="form-label">Description Chambre</label>
+              <input type="text" class="form-control" v-model="chambre.descriptionchambre">
             </div>
-
-            <div class="form-group">
-            <label>Numero Chambre</label>
-            <input type="number" class="form-control"  v-model="chambre.numchambre">
+  
+            <!-- Champ Numero Chambre -->
+            <div class="mb-3">
+              <label for="numchambre" class="form-label">Numero Chambre</label>
+              <input type="number" class="form-control" v-model="chambre.numchambre">
             </div>
-
-            <div class="form-group">
-            <label>Prix par nuit</label>
-            <input type="number" class="form-control" id="prixnuit" v-model="chambre.prixnuit">
+  
+            <!-- Champ Prix par nuit -->
+            <div class="mb-3">
+              <label for="prixnuit" class="form-label">Prix par nuit</label>
+              <input type="number" class="form-control" id="prixnuit" v-model="chambre.prixnuit">
             </div>
-
+  
+            <!-- Bouton de soumission -->
             <button type="submit" class="btn btn-primary">Update</button>
-    </form>
+          </form>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    </template>
-
-    <script setup>
-    import axios from 'axios';
-    import { useRouter,useRoute } from 'vue-router';
-    const router = useRouter() ;
-    const route = useRoute();
-    import { ref, onMounted } from 'vue';
-    const chambre = ref({});
-    const fetchChambre= async()=> {
-    await axios
-    .get(`http://localhost:8000/api/chambres/${route.params.id}`)
-    .then((res) => {chambre.value = res.data;})
-    .catch((err) => {console.error(err)})
+  </template>
+  
+  <script setup>
+  import axios from 'axios';
+  import { useRouter, useRoute } from 'vue-router';
+  import { ref, onMounted } from 'vue';
+  
+  const router = useRouter();
+  const route = useRoute();
+  const chambre = ref({});
+  
+  // Fonction pour récupérer les données de la chambre
+  const fetchChambre = async () => {
+    try {
+      const response = await axios.get(`http://localhost:8000/api/chambres/${route.params.id}`);
+      chambre.value = response.data;
+    } catch (error) {
+      console.error(error);
     }
-    const updateChambre= async()=> {await axios
-    .patch(`http://localhost:8000/api/chambres/${route.params.id}`, chambre.value)
-    .then(() => {
-    router.push('/listchambre');
-    })
-    .catch((err) => {console.error(err)})
+  };
+  
+  // Fonction pour mettre à jour les informations de la chambre
+  const updateChambre = async () => {
+    try {
+      await axios.patch(`http://localhost:8000/api/chambres/${route.params.id}`, chambre.value);
+      router.push('/listchambre');
+    } catch (error) {
+      console.error(error);
     }
-
-    onMounted(async() => {
+  };
+  
+  // Récupérer les données de la chambre au chargement du composant
+  onMounted(async () => {
     await fetchChambre();
-    });
-    </script>
+  });
+  </script>
+  
