@@ -13,11 +13,26 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('utilisateur_id')->constrained(); // Ajout d'une clé étrangère vers la table 'utilisateurs'
-            $table->foreignId('hotel_id')->constrained(); // Ajout d'une clé étrangère vers la table 'hotels'
             $table->date('date_debut');
             $table->date('date_fin');
+            $table->string('nomclient');
+
+            $table->unsignedBigInteger('hotelID');
+            $table->foreign('hotelID')
+                ->references('id')
+                ->on('hotels')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');   
+             
+            $table->unsignedBigInteger('chambreID');
+            $table->foreign('chambreID')
+                ->references('id')
+                ->on('chambres')
+                ->onDelete('restrict')
+                ->onUpdate('restrict'); 
+                 
             $table->integer('nombre_personnes');
+
             $table->timestamps();
         });
     }

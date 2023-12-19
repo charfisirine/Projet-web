@@ -12,7 +12,8 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        $hotels = Hotel::all();
+        return $hotels;
     }
 
     /**
@@ -20,30 +21,46 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $hotels = new Hotel([
+        'nomhotel' => $request->input('nomhotel'),
+        'numtelephone' => $request->input('numtelephone'),
+        'adresse' => $request->input('adresse'),
+        'description' => $request->input('description'),
+        'prixnuit' => $request->input('prixnuit'),
+        'imagehotel' => $request->input('imagehotel')
+        ]);
+
+        $hotels->save();
+        
+        return response()->json($hotels, 201);
+        }
 
     /**
      * Display the specified resource.
      */
-    public function show(Hotel $hotel)
+    public function show( $id)
     {
-        //
-    }
+        $hotels = Hotel::find($id);
+        return response()->json($hotels);
+        }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Hotel $hotel)
+    public function update(Request $request, $id)
     {
-        //
+        $hotels = Hotel::find($id);
+        $hotels->update($request->all());
+        return response()->json($hotels, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Hotel $hotel)
+    public function destroy($id)
     {
-        //
+        $hotels = Hotel::find($id);
+        $hotels->delete();
+        return response()->json('Hotel supprimée !');
     }
 }

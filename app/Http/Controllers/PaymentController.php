@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Paiement;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
-class PaiementController extends Controller
+class PaymentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class PaiementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Paiement $paiement)
+    public function show(Payment $payment)
     {
         //
     }
@@ -34,7 +34,7 @@ class PaiementController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Paiement $paiement)
+    public function update(Request $request, Payment $payment)
     {
         //
     }
@@ -42,7 +42,7 @@ class PaiementController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Paiement $paiement)
+    public function destroy(Payment $payment)
     {
         //
     }

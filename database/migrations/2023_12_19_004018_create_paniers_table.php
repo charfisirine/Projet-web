@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('paniers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('utilisateur_id')->constrained(); // Clé étrangère reliant le panier à un utilisateur
             $table->timestamps();
         });
     }
