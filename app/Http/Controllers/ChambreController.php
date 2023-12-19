@@ -23,13 +23,13 @@ class ChambreController extends Controller
     {
         $chambre = new Chambre([
         'type' => $request->input('type'),
-        'Disponibilité' => $request->input('Disponibilité'),
+        'Disponibilite' => $request->input('Disponibilite'),
         'descriptionchambre' => $request->input('descriptionchambre'),
         'prixnuit' => $request->input('prixnuit'),
         'numchambre' => $request->input('numchambre')
         ]);
         $chambre->save();
-        
+
         return response()->json($chambre, 201);
         }
 

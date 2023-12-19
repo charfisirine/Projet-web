@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Chambre extends Model
 {
     use HasFactory;
-    protected $fillable=['type','Disponibilité','descriptionchambre','numchambre','prixnuit'];   
+    protected $fillable=['type','Disponibilite','descriptionchambre','numchambre','prixnuit'];
 
     public function reservations()
     {
-        return $this->hasMany(reservation::class,"reservationID");
+        return $this->hasMany(Reservation::class,"reservationID");
     }
 }
 

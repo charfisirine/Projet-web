@@ -15,22 +15,28 @@ return new class extends Migration
             $table->id();
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->string('nomclient');
 
             $table->unsignedBigInteger('hotelID');
             $table->foreign('hotelID')
                 ->references('id')
                 ->on('hotels')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');   
-             
+                ->onDelete('restrict') //cela signifie que les lignes liées ne peuvent pas être supprimées ou mises à jour s'il existe des lignes dépendantes dans une autre table.
+                ->onUpdate('restrict');
+
             $table->unsignedBigInteger('chambreID');
             $table->foreign('chambreID')
                 ->references('id')
                 ->on('chambres')
                 ->onDelete('restrict')
-                ->onUpdate('restrict'); 
-                 
+                ->onUpdate('restrict');
+
+                $table->unsignedBigInteger('userID');
+                $table->foreign('userID')
+                    ->references('id')
+                    ->on('utilisateurs')
+                    ->onDelete('restrict') //cela signifie que les lignes liées ne peuvent pas être supprimées ou mises à jour s'il existe des lignes dépendantes dans une autre table.
+                    ->onUpdate('restrict');
+
             $table->integer('nombre_personnes');
 
             $table->timestamps();

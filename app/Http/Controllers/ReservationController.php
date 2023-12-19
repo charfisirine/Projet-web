@@ -23,6 +23,8 @@ public function store(Request $request)
     'nombre_personnes' => $request->input('nombre_personnes'),
     'chambreID' => $request->input('chambreID'),
     'hotelID' => $request->input('hotelID'),
+    'userID' => $request->input('userID'),
+
 
     ]);
     $reservation->save();
@@ -48,14 +50,14 @@ public function destroy($id)
     return response()->json('Reservation supprimée !');
 }
 
-public function showReservationByCAT($idres)
-{
-    $reservations = Reservation::where('chambreID', $idres)
-                                ->orWhere('hotelID', $idres)
-                                ->with('chambres', 'hotels')
-                                ->get();
+// public function showReservationByCAT($idres)
+// {
+//     $reservations = Reservation::where('chambreID', $idres)
+//                                 ->orWhere('hotelID', $idres)
+//                                 ->with('chambres', 'hotels')
+//                                 ->get();
 
-    return response()->json($reservations);
-}
+//     return response()->json($reservations);
+// }
 
 }

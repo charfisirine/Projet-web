@@ -31,7 +31,7 @@ Route::resource('hotels', HotelController::class);
 Route::middleware('api')->group(function () {
     Route::resource('reservations', ReservationController::class);
     });
-    
 
-Route::get('/res/{idres}',
-[ReservationController::class,'showReservationByCAT']);
+
+// Route::get('/res/{idres}',
+// [ReservationController::class,'showReservationByCAT']);
