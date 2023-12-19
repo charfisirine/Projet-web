@@ -26,7 +26,7 @@
                       <td class="text-xs font-weight-bold mb-0">{{ chambre.descriptionchambre }}</td>
                       <td class="align-middle text-center text-sm">{{ chambre.numchambre }}</td>
                       <td class="align-middle text-center text-sm">{{ chambre.prixnuit }}</td>
-                      <td class="text-xs font-weight-bold mb-0"><button class="btn btn-warning mx-2">Modifier</button></td>
+                      <td class="text-xs font-weight-bold mb-0">  <router-link :to="'/editchambre/' + chambre.id" class="btn btn-warning mx-2">Modifier</router-link></td>
                       <td class="text-xs font-weight-bold mb-0"><button class="btn btn-danger mx-2" @click="deleteChambre(chambre.id)">Supprimer</button></td>
                     </tr>
                   </tbody>

@@ -23,7 +23,7 @@ export const routes = [
         ,
         {
             name: editChambre,
-            path: '/Editchambre',
+            path: '/editchambre/:id',
             component: editChambre
             }
 
