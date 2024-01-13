@@ -4,7 +4,77 @@ body {
     background: #FFF;
     font-family: 'Oxygen', sans-serif;
 }
+.tittle {
+    text-decoration: underline;
+  
+}
 
+
+/* Styles for active and show tabs */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: #f8d828;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+/* Styles for non-active tabs */
+.nav-tabs .nav-link {
+    color: #495057;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+/* Styles for tab focus and hover */
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+/* Common styles for all nav-links */
+.nav-tabs .nav-link {
+    font-size: 17px;
+    padding-left: 23px;
+    padding-right: 23px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+/* Additional styles for nav-links */
+.nav-tabs .nav-link {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+/* Styles for button hover */
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+
+
+
+.nav-fill .nav-item {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+}
+.text-center {
+    text-align: center;
+}
+.text-center {
+    text-align: center!important;
+}
 
 body button,
 .btn,
@@ -1024,7 +1094,7 @@ ul.style-lists li {
 
 /* services */
 .serives-mobamu {
-    background: url(../../assets/images/hotel1.jfif) no-repeat bottom;
+    background: url(../../assets/images/anse-source-argent.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;

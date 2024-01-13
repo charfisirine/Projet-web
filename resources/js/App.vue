@@ -10,9 +10,11 @@
 
     <router-link to="/Addchambre" class="nav-item nav-link">Add Chambre</router-link>
 
-    <router-link to="/listhotel" class="nav-item nav-link">Hotel</router-link>
+    <router-link to="/listhotel" class="nav-item nav-link"> Hotel</router-link>
 
     <router-link to="/Addhotel" class="nav-item nav-link">Add Hotel</router-link>
+
+    <router-link to="/Addchambre" class="nav-item nav-link">Resrevation</router-link>
 
 
 

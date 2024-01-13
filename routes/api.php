@@ -30,8 +30,10 @@ Route::resource('hotels', HotelController::class);
 });
 Route::middleware('api')->group(function () {
     Route::resource('reservations', ReservationController::class);
-    });
-
+});
+ Route::middleware('api')->group(function () {
+ Route::resource('typecham_suites', TypechamSuiteController::class);
+ });
 
 // Route::get('/res/{idres}',
 // [ReservationController::class,'showReservationByCAT']);

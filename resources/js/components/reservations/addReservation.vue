@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-            <form @submit.prevent="addChambre">
+            <form @submit.prevent="addReservation">
                 <div class="mb-3">
                     <label for="type" class="form-label">Type</label>
                     <select class="form-select" id="type" v-model="chambre.type">
