@@ -9,7 +9,7 @@
 					<h3 class="text-wh my-3">Welcome to our Exceptionel Agence </h3>
 					<p>Enjoy Your Every Moments With Your Partner In Villas  Resort.<br>Sed do eiusmod tempor incididunt utlabore.</p>
 				</div>
-			
+
 			</div>
 		</div>
 		<!-- //banner bottom -->
@@ -24,7 +24,7 @@
 						<div class="main-img">
 							<img src="../../assets/images/log1.jpg" alt="" class="img-fluid pos-aboimg">
 							<img src="../../assets/images/log2.jpg" alt="" class="img-fluid pos-aboimg2">
-	
+
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-7 about-right offset-xl-1">
@@ -35,15 +35,15 @@
 						<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit.</p>
 						<a href="about.html" class="btn button-style-2 mt-sm-5 mt-4">Read More</a>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
 		<!-- //about -->
 	<hr>
 	<br>
-	
-	
+
+
 		<!-- stats -->
 		<div class="stats py-5">
 			<div class="container py-xl-5 py-lg-3">
@@ -95,7 +95,7 @@
 
 
 
-	
+
 			<!-- price -->
 		<div class="rooms-w3ls bg-li py-5" id="price">
 			<div class="container-fluid py-xl-5 py-lg-3">
@@ -128,7 +128,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane active" id="zone_1_tabarka">
                     <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr">
-						
+                        <!-- Add your hotel list content for tbarka here -->
                 </div>
                 <div class="tab-pane" id="zone_1_hammamet">
                     <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
@@ -164,14 +164,16 @@
 							<h4 class="my-2"><a href="https://www.goldenyasmin.com/fr/mehari-tabarka/">Mehari Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-midd-head">62 TND</span>
+									<span class="price-top-head">TND</span>
+									<span class="price-midd-head">120</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
 								<li> enfant moins 6 ans gratuit </li>
 								<li>Logement Petit Déjeuner </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l offre</a>
+							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 					<div class="col-lg-4 price-mobamus my-lg-0 my-5">
@@ -184,15 +186,14 @@
 							<h4 class="my-2"><a href="single.html">Itropika</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-top-head">$</span>
+									<span class="price-top-head">TND</span>
 									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ per month</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li>Perfect for traveling couples </li>
-								<li>Breakfast included </li>
-								<li>Concierge services </li>
+								<li> enfant moins 6 ans gratuit </li>
+								<li>Logement Petit Déjeuner </li>
 							</ul>
 							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
@@ -207,15 +208,14 @@
 							<h4 class="my-2"><a href="single.html">Marina Prestige Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-top-head">$</span>
-									<span class="price-midd-head">182</span>
-									<span class="price-right-head">/ per month</span>
+									<span class="price-top-head">TND</span>
+									<span class="price-midd-head">120</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li>Two double beds </li>
-								<li>Babysitting facilities</li>
-								<li>1 free bed available on request</li>
+								<li> enfant moins 6 ans gratuit </li>
+								<li>Logement Petit Déjeuner </li>
 							</ul>
 							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 							<!--<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>-->
@@ -234,15 +234,14 @@
 							<h4 class="my-2"><a href="single.html">Dar Ismail</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-top-head">$</span>
-									<span class="price-midd-head">195</span>
-									<span class="price-right-head">/ per month</span>
+									<span class="price-top-head">TND</span>
+									<span class="price-midd-head">120</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li>Only 5 rooms are available </li>
-								<li>Breakfast included </li>
-								<li>Price does not include VAT & services fee </li>
+								<li> enfant moins 6 ans gratuit </li>
+								<li>Logement Petit Déjeuner </li>
 							</ul>
 							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
@@ -257,15 +256,16 @@
 							<h4 class="my-2"><a href="single.html">La Cigale Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-top-head">$</span>
+									<span class="price-top-head">TND</span>
 									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ per month</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li>Perfect for traveling couples </li>
-								<li>Breakfast included </li>
-								<li>Concierge services </li>
+								<li> enfant moins 6 ans gratuit </li>
+								<li>Logement Petit Déjeuner </li>
+                                <li>1 free bed available on request</li>
+
 							</ul>
 							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
@@ -280,7 +280,7 @@
 							<h4 class="my-2"><a href="single.html">Les Mimosas</a></h4>
 							<div class="lm-item-price">
 								<h6>
-									<span class="price-top-head">$</span>
+									<span class="price-top-head">TND</span>
 									<span class="price-midd-head">182</span>
 									<span class="price-right-head">/ per month</span>
 								</h6>
@@ -288,7 +288,6 @@
 							<ul class="style-lists">
 								<li>Two double beds </li>
 								<li>Babysitting facilities</li>
-								<li>1 free bed available on request</li>
 							</ul>
 							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
@@ -298,9 +297,9 @@
 		</div>
 		<!-- //price -->
 		<br>
-	
-	
-	
+
+
+
 		<!-- services -->
 		<div class="serives-mobamu py-5" id="services">
 			<div class="container py-xl-5 py-lg-3">
@@ -336,14 +335,14 @@
 							<p>Etre actif et sportif</p>
 						</div>
 					</div>
-				
+
 				</div>
 			</div>
 		</div>
 		<!-- //services -->
-	
+
 	<br> <br>
-	
+
 		<!-- middle -->
 		<div class="middle py-5">
 			<div class="container py-xl-5 py-lg-3">
@@ -354,7 +353,7 @@
 			</div>
 		</div>
 		<!-- //middle -->
-	
+
 		<!-- newsletter -->
 		<div class="newsletter_w3w3pvt py-5">
 			<div class="container py-xl-5 py-lg-3">
@@ -373,7 +372,7 @@
 			</div>
 		</div>
 		<!-- //newsletter -->
-	
+
 		<!-- footer -->
 		<footer class="py-5">
 			<div class="container pt-xl-4">
@@ -464,23 +463,52 @@
 		<div class="cpy-right text-center py-3">
 			<p>© 2023 All rights reserved | Design by wiem & sirine</p>
 		</div>
-	
+
 	</template>
 	<script>
-	
+
 		export default {
 		mounted() {
 		console.log('Component mounted.')
 		}
 		}
-	
+
 		addEventListener("load", function () {
 		setTimeout(hideURLbar, 0);
 		}, false);
-	
+
 		function hideURLbar() {
 		window.scrollTo(0, 1);
 		}
+        // liste des hotel selon leur ville
+        document.addEventListener("DOMContentLoaded", function () {
+        const tabSousse = document.getElementById("tab_sousse");
+
+        tabSousse.addEventListener("click", function () {
+            // Add logic to fetch and display the list of hotels for Sousse
+            const sousseHotelListContainer = document.getElementById("zone_1_sousse");
+
+            // Replace this with actual logic to fetch hotel data from an API or other source
+            // For simplicity, using a hardcoded list here
+            const hotelsInSousse = [
+                "Hotel 1 - Sousse",
+                "Hotel 2 - Sousse",
+                "Hotel 3 - Sousse",
+            ];
+
+            // Construct the HTML for the hotel list
+            const hotelListHTML = `
+                <h4>List of Hotels in Sousse</h4>
+                <ul>
+                    ${hotelsInSousse.map(hotel => `<li>${hotel}</li>`).join('')}
+                </ul>
+            `;
+
+            // Update the content of the Sousse hotel list container
+            sousseHotelListContainer.innerHTML = hotelListHTML;
+        });
+    });
+
 		</script>
 		<style>
 		@import './style.css';
