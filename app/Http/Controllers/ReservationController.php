@@ -9,7 +9,7 @@ class ReservationController extends Controller
 {
 public function index()
 {
-    $reservations = Reservation::with('hotels','chambres')->get();
+    $reservations = Reservation::with('hotels')->get();
     return $reservations;
 }
 
