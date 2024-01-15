@@ -16,14 +16,16 @@ public function index()
 public function store(Request $request)
 {
     $reservation = new Reservation([
-    'nomclient' => $request->input('nomclient'),
+    'hotelID' => $request->input('hotelID'),
+    'nom' => $request->input('nom'),
+    'prenom' => $request->input('prenom'),
+    'email' => $request->input('email'),
+    'numero_tel' => $request->input('numero_tel'),
     'date_debut' => $request->input('date_debut'),
     'date_fin' => $request->input('date_fin'),
-    'client' => $request->input('client'),
-    'nombre_personnes' => $request->input('nombre_personnes'),
     'chambreID' => $request->input('chambreID'),
-    'hotelID' => $request->input('hotelID'),
-    'userID' => $request->input('userID'),
+    'nombre_personnes' => $request->input('nombre_personnes'),
+    'message' => $request->input('message'),
 
 
     ]);

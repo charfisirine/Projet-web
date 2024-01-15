@@ -13,33 +13,28 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->date('date_debut');
-            $table->date('date_fin');
-
             $table->unsignedBigInteger('hotelID');
             $table->foreign('hotelID')
                 ->references('id')
                 ->on('hotels')
                 ->onDelete('restrict') //cela signifie que les lignes liées ne peuvent pas être supprimées ou mises à jour s'il existe des lignes dépendantes dans une autre table.
                 ->onUpdate('restrict');
-
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('email');
+            $table->integer('numero_tel');
+            $table->date('date_debut');
+            $table->date('date_fin');
             $table->unsignedBigInteger('chambreID');
             $table->foreign('chambreID')
                 ->references('id')
                 ->on('chambres')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-
-                $table->unsignedBigInteger('userID');
-                $table->foreign('userID')
-                    ->references('id')
-                    ->on('utilisateurs')
-                    ->onDelete('restrict') //cela signifie que les lignes liées ne peuvent pas être supprimées ou mises à jour s'il existe des lignes dépendantes dans une autre table.
-                    ->onUpdate('restrict');
-
             $table->integer('nombre_personnes');
-
             $table->timestamps();
+            $table->string('message');
+
         });
     }
 
