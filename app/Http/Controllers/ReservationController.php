@@ -17,13 +17,13 @@ public function store(Request $request)
 {
     $reservation = new Reservation([
     'hotelID' => $request->input('hotelID'),
+    'type' => $request->input('type'),
     'nom' => $request->input('nom'),
     'prenom' => $request->input('prenom'),
     'email' => $request->input('email'),
     'numero_tel' => $request->input('numero_tel'),
     'date_debut' => $request->input('date_debut'),
     'date_fin' => $request->input('date_fin'),
-    'chambreID' => $request->input('chambreID'),
     'nombre_personnes' => $request->input('nombre_personnes'),
     'message' => $request->input('message'),
 

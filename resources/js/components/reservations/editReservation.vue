@@ -1,51 +1,67 @@
 <template>
     <div>
       <!-- Titre -->
-      <h3 class="text-center mt-4 mb-4">Modifier Chambre</h3>
+      <h3 class="text-center mt-4 mb-4">Modifier Rservation</h3>
   
       <!-- Formulaire -->
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form @submit.prevent="updateChambre" class="border p-4">
-            <!-- Champ Type -->
+          <form @submit.prevent="updateReservation" class="border p-4">  
             <div class="mb-3">
-              <label for="type" class="form-label">Type</label>
-              <select class="form-select" v-model="chambre.type">
-                <option value="Simple">Simple</option>
-                <option value="Double">Double</option>
-                <option value="Suite">Suite</option>
-                <option value="Familiale">Familiale</option>
-              </select>
-            </div>
+                    <label for="hotelID" class="form-label"> Nom hotel </label>
+                    <input type="text" class="form-control" id="hotelID" v-model="reservation.hotelID">
+                </div>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <select class="form-select" id="type" v-model="reservation.type">
+                        <option value="Simple">Simple</option>
+                        <option value="Double">Double</option>
+                        <option value="Suite">Suite</option>
+                        <option value="Familiale">Familiale</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom </label>
+                    <input type="text" class="form-control" id="nom" v-model="reservation.nom">
+                </div>
+
+                <div class="mb-3">
+                    <label for="prenom" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="prenom" v-model="reservation.prenom">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" v-model="reservation.email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="numero_tel" class="form-label">Numero telephone</label>
+                    <input type="number" class="form-control" id="numero_tel" v-model="reservation.numero_tel">
+                </div>
+
+                <div class="mb-3">
+                    <label for="date_debut" class="form-label">Date Debut</label>
+                    <input type="date" class="form-control" id="date_debut" v-model="reservation.date_debut">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="date_fin" class="form-label">Date Fin</label>
+                    <input type="date" class="form-control" id="date_fin" v-model="reservation.date_fin">
+                </div>
+
+             
+
+                <div class="mb-3">
+                    <label for="nombre_personnes" class="form-label">Nombre personnes</label>
+                    <input type="number" class="form-control" id="nombre_personnes" v-model="reservation.nombre_personnes">
+                </div>
+
+                <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" v-model="reservation.message"></textarea>
+                </div>
   
-            <!-- Champ Disponibilité -->
-            <div class="mb-3">
-              <label for="Disponibilite" class="form-label">Disponibilité</label>
-              <select class="form-select" v-model="chambre.Disponibilite">
-                <option value="Disponible">Disponible</option>
-                <option value="Non disponible">Non disponible</option>
-              </select>
-            </div>
-  
-            <!-- Champ Description Chambre -->
-            <div class="mb-3">
-              <label for="descriptionchambre" class="form-label">Description Chambre</label>
-              <input type="text" class="form-control" v-model="chambre.descriptionchambre">
-            </div>
-  
-            <!-- Champ Numero Chambre -->
-            <div class="mb-3">
-              <label for="numchambre" class="form-label">Numero Chambre</label>
-              <input type="number" class="form-control" v-model="chambre.numchambre">
-            </div>
-  
-            <!-- Champ Prix par nuit -->
-            <div class="mb-3">
-              <label for="prixnuit" class="form-label">Prix par nuit</label>
-              <input type="number" class="form-control" id="prixnuit" v-model="chambre.prixnuit">
-            </div>
-  
-            <!-- Bouton de soumission -->
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
@@ -60,31 +76,28 @@
   
   const router = useRouter();
   const route = useRoute();
-  const chambre = ref({});
+  const reservation = ref({});
   
-  // Fonction pour récupérer les données de la chambre
-  const fetchChambre = async () => {
+  const fetchReservation = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/chambres/${route.params.id}`);
-      chambre.value = response.data;
+      const response = await axios.get(`http://localhost:8000/api/resrevations/${route.params.id}`);
+      reservation.value = response.data;
     } catch (error) {
       console.error(error);
     }
   };
   
-  // Fonction pour mettre à jour les informations de la chambre
-  const updateChambre = async () => {
+  const updateReservation = async () => {
     try {
-      await axios.patch(`http://localhost:8000/api/chambres/${route.params.id}`, chambre.value);
-      router.push('/listchambre');
+      await axios.patch(`http://localhost:8000/api/resrevations/${route.params.id}`, reservation.value);
+      router.push('/listreservation');
     } catch (error) {
       console.error(error);
     }
   };
   
-  // Récupérer les données de la chambre au chargement du composant
   onMounted(async () => {
-    await fetchChambre();
+    await fetchReservation();
   });
   </script>
   

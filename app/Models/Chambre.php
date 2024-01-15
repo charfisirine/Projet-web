@@ -10,9 +10,6 @@ class Chambre extends Model
     use HasFactory;
     protected $fillable=['type','Disponibilite','descriptionchambre','numchambre','prixnuit'];
 
-    public function reservations()
-    {
-        return $this->hasMany(Reservation::class,"reservationID");
-    }
+ 
 }
 

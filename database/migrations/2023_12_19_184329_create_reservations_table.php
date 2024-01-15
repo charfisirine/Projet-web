@@ -19,18 +19,14 @@ return new class extends Migration
                 ->on('hotels')
                 ->onDelete('restrict') //cela signifie que les lignes liées ne peuvent pas être supprimées ou mises à jour s'il existe des lignes dépendantes dans une autre table.
                 ->onUpdate('restrict');
+            $table->string('type');
             $table->string('nom');
             $table->string('prenom');
             $table->string('email');
             $table->integer('numero_tel');
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->unsignedBigInteger('chambreID');
-            $table->foreign('chambreID')
-                ->references('id')
-                ->on('chambres')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+            
             $table->integer('nombre_personnes');
             $table->timestamps();
             $table->string('message');

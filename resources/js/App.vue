@@ -14,7 +14,9 @@
 
     <router-link to="/Addhotel" class="nav-item nav-link">Add Hotel</router-link>
 
-    <router-link to="/Addchambre" class="nav-item nav-link">Resrevation</router-link>
+    <router-link to="/listreservation" class="nav-item nav-link"> Resrevation</router-link>
+
+    <router-link to="/Addreservation" class="nav-item nav-link"> Add Resrevation</router-link>
 
 
 

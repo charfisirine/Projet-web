@@ -8,6 +8,10 @@ import viewHotel from './components/hotels/viewHotel.vue';
 import addHotel from './components/hotels/addHotel.vue';
 import editHotel from './components/hotels/editHotel.vue';
 
+import viewReservation from './components/reservations/viewReservation.vue';
+import addReservation from './components/reservations/addReservation.vue';
+import editReservation from './components/reservations/editReservation.vue';
+
 
 
 export const routes = [
@@ -47,5 +51,22 @@ export const routes = [
         name: 'editHotel',
         path: '/edithotel/:id',
         component: editHotel
+    },
+    {
+        name: 'viewReservation',
+        path: '/listreservation',
+        component: viewReservation
+    },
+ 
+
+    {
+        name: 'addReservation',
+        path: '/Addreservation',
+        component: addReservation
+    },
+    {
+        name: 'editReservation',
+        path: '/editreservation/:id',
+        component: editReservation
     }
 ];
