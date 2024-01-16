@@ -8,7 +8,7 @@
               <option v-for="hotel in hotels" :key="hotel.id" :value="hotel.id">{{ hotel.nomhotel }}</option>
             </select>
           </div>
-  
+
           <div class="mb-3">
             <label for="type" class="form-label">Type</label>
             <select class="form-select" id="type" v-model="reservation.type">
@@ -18,63 +18,63 @@
               <option value="Familiale">Familiale</option>
             </select>
           </div>
-  
+
           <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" id="nom" v-model="reservation.nom">
           </div>
-  
+
           <div class="mb-3">
             <label for="prenom" class="form-label">Prenom</label>
             <input type="text" class="form-control" id="prenom" v-model="reservation.prenom">
           </div>
-  
+
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="text" class="form-control" id="email" v-model="reservation.email">
           </div>
-  
+
           <div class="mb-3">
             <label for="numero_tel" class="form-label">Numero telephone</label>
             <input type="number" class="form-control" id="numero_tel" v-model="reservation.numero_tel">
           </div>
-  
+
           <div class="mb-3">
             <label for="date_debut" class="form-label">Date Debut</label>
             <input type="date" class="form-control" id="date_debut" v-model="reservation.date_debut">
           </div>
-  
+
           <div class="mb-3">
             <label for="date_fin" class="form-label">Date Fin</label>
             <input type="date" class="form-control" id="date_fin" v-model="reservation.date_fin">
           </div>
-  
+
           <div class="mb-3">
             <label for="nombre_personnes" class="form-label">Nombre personnes</label>
             <input type="number" class="form-control" id="nombre_personnes" v-model="reservation.nombre_personnes">
           </div>
-  
+
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control" id="message" v-model="reservation.message"></textarea>
           </div>
-  
+
           <button type="submit" class="btn btn-outline-primary">Enregistrer</button>
           <router-link to="/listreservation" class="btn btn-outline-danger mx-2">Cancel</router-link>
         </form>
       </div>
     </div>
   </template>
-  
+
   <script setup>
   import { ref, onMounted } from "vue";
   import { useRouter } from 'vue-router';
   import axios from 'axios';
-  
+
   const router = useRouter();
-  
+
   const hotels = ref([]);
-  
+
   const reservation = ref({
       hotelID: "",
       type: "",
@@ -88,7 +88,7 @@
       nombre_personnes: "",
       message: ""
   });
-  
+
   const fetchHotels = async () => {
       try {
           const response = await axios.get("http://localhost:8000/api/hotels");
@@ -97,7 +97,7 @@
           console.error("Erreur lors de la récupération de la liste des hôtels", error);
       }
   };
-  
+
   const addReservation = async () => {
       try {
           await axios.post("http://localhost:8000/api/reservations/", reservation.value);
@@ -106,13 +106,13 @@
           console.log(err);
       }
   };
-  
+
   onMounted(() => {
       document.title = 'Réserver';
       fetchHotels();
   });
   </script>
-  
+
   <style scoped>
   /* Ajoutez vos styles spécifiques ici si nécessaire */
   </style>
