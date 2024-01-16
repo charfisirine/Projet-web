@@ -11,10 +11,30 @@ import editHotel from './components/hotels/editHotel.vue';
 import viewReservation from './components/reservations/viewReservation.vue';
 import addReservation from './components/reservations/addReservation.vue';
 import editReservation from './components/reservations/editReservation.vue';
+import Login from './components/authentification/login.vue'
+import Register from './components/authentification/register.vue'
+import Dashboard from './components/admin/dashboard.vue'
 
 
 
 export const routes = [
+    {
+        name: "login",
+        path: "/login",
+        component: Login,
+        },
+        {
+        name: "register",
+        path: "/register",
+        component: Register,
+        },
+        {
+
+        name: "dashboard",
+        path: '/dashboard',
+        component: Dashboard,
+
+        },
     {
         name: 'accueil',
         path: '/',

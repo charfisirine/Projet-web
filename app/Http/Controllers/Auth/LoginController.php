@@ -25,6 +25,12 @@ return response()->json([
 }
 throw ValidationException::withMessages([
 'email' => ['The provided credentials are incorrect.'],
+<<<<<<< HEAD
+=======
+
+2
+
+>>>>>>> 2a0a8c243740f13ea1ac47192f81c6abb64d7524
 ]);
 }
 public function logout(Request $request)
@@ -36,4 +42,8 @@ return response()->json([
 
 }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2a0a8c243740f13ea1ac47192f81c6abb64d7524
