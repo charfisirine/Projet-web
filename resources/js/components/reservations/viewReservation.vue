@@ -1,7 +1,5 @@
 <template>
-
     <div class="container mt-4">
-
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="card border-0">
@@ -10,8 +8,8 @@
                 <table class="table table-sm align-items-center table-bordered mb-0">
                   <thead>
                     <tr>
-                      <th class="align-middle">Nom hotel </th>
-                      <th class="align-middle">type</th>
+                      <th class="align-middle">Nom hotel</th>
+                      <th class="align-middle">Type</th>
                       <th class="align-middle">Nom</th>
                       <th class="align-middle">Prenom</th>
                       <th class="align-middle">Email</th>
@@ -36,8 +34,12 @@
                       <td class="align-middle text-center text-sm">{{ reservation.date_fin }}</td>
                       <td class="align-middle text-center text-sm">{{ reservation.nombre_personnes }}</td>
                       <td class="align-middle text-center text-sm">{{ reservation.message }}</td>
-                      <td class="text-xs font-weight-bold mb-0">  <router-link :to="'/editreservation/' + reservation.id" class="btn btn-warning mx-2">Modifier</router-link></td>
-                      <td class="text-xs font-weight-bold mb-0"><button class="btn btn-danger mx-2" @click="deleteReservation(reservation.id)">Supprimer</button></td>
+                      <td class="text-xs font-weight-bold mb-0">
+                        <router-link :to="'/editreservation/' + reservation.id" class="btn btn-warning mx-2">Modifier</router-link>
+                      </td>
+                      <td class="text-xs font-weight-bold mb-0">
+                        <button class="btn btn-danger mx-2" @click="deleteReservation(reservation.id)">Supprimer</button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -55,25 +57,24 @@
 
   const reservations = ref([]);
 
-  const getreservations = async () => {
+  const getReservations = async () => {
     try {
-        const response = await axios.get("http://localhost:8000/api/reservations");
-        reservations.value = response.data;
-        console.log("Réservations:", reservations.value);
+      const response = await axios.get("http://localhost:8000/api/reservations");
+      reservations.value = response.data;
+      console.log(reservations.value); // Utilisez reservations.value au lieu de reservation.value
     } catch (error) {
-        console.error("Erreur lors de la récupération des réservations:", error);
+      console.error(error);
     }
-};
-
+  };
 
   onMounted(() => {
-    getreservations();
+    getReservations(); // Utilisez getReservations au lieu de getreservations
   });
 
   const deleteReservation = async (id) => {
     try {
       await axios.delete(`http://localhost:8000/api/reservations/${id}`);
-      getreservations();
+      getReservations(); // Utilisez getReservations au lieu de getreservations
     } catch (error) {
       console.error(error);
     }

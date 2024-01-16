@@ -28,8 +28,9 @@ return new class extends Migration
             $table->date('date_fin');
             
             $table->integer('nombre_personnes');
-            $table->timestamps();
             $table->string('message');
+
+            $table->timestamps();
 
         });
     }
