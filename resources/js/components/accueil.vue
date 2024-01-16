@@ -344,14 +344,16 @@
 	<br> <br>
 
 		<!-- middle -->
-		<div class="middle py-5">
-			<div class="container py-xl-5 py-lg-3">
-				<div class="welcome-left text-center py-md-5 py-3">
-					<h3>Enjoy Your Every Moments With Your Partner In Our Hotels Resort</h3>
-					<a href="book.html" class="btn button-style-2  mt-sm-5 mt-4">Book Now</a>
-				</div>
-			</div>
-		</div>
+		<div>
+    <div class="middle py-5">
+      <div class="container py-xl-5 py-lg-3">
+        <div class="welcome-left text-center py-md-5 py-3">
+          <h3>Enjoy Your Every Moments With Your Partner In Our Hotels Resort</h3>
+          <router-link to="/Addreservation" class="btn button-style-2 mt-sm-5 mt-4">Book Now</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
 		<!-- //middle -->
 
 		<!-- newsletter -->
@@ -466,6 +468,8 @@
 
 	</template>
 	<script>
+
+
 
 		export default {
 		mounted() {

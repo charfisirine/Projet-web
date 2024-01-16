@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-public function index()
-{
-    $reservations = Reservation::with('hotels','chambres')->get();
-    return $reservations;
-}
+    public function index()
+    {
+        $reservations = Reservation::with('hotels')->get();
+        return $reservations;
+    }
 
 public function store(Request $request)
 {

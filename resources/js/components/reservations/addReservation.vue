@@ -2,7 +2,7 @@
     <div>
         <div class="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
             <form @submit.prevent="addReservation">
-            
+
 
             <div class="mb-3">
                 <label for="hotelID" class="form-label"> Nom hotel </label>
@@ -28,7 +28,7 @@
                     <input type="text" class="form-control" id="nom" v-model="reservation.nom">
                 </div>
 
-            
+
 
                 <div class="mb-3">
                     <label for="prenom" class="form-label">Prenom</label>
@@ -49,13 +49,13 @@
                     <label for="date_debut" class="form-label">Date Debut</label>
                     <input type="date" class="form-control" id="date_debut" v-model="reservation.date_debut">
                 </div>
-                
+
                 <div class="mb-3">
                     <label for="date_fin" class="form-label">Date Fin</label>
                     <input type="date" class="form-control" id="date_fin" v-model="reservation.date_fin">
                 </div>
 
-               
+
 
                 <div class="mb-3">
                     <label for="nombre_personnes" class="form-label">Nombre personnes</label>
@@ -110,14 +110,15 @@ onMounted(() => {
     document.title = 'Réserver';
     fetchHotels();
 });
-
 const addReservation = async () => {
-    await axios.post("http://localhost:8000/api/resrevations/", resrevation.value)
+    await axios.post("http://localhost:8000/api/reservations/", reservation.value)
         .then(() => (
             router.push('/listresrevation')
         ))
         .catch(err => console.log(err));
 };
+
+
 
 onMounted(() => {
     document.title = 'Réserver';
@@ -125,5 +126,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-  
+
 </style>

@@ -40,7 +40,7 @@ export const routes = [
         path: '/listhotel',
         component: viewHotel
     },
- 
+
 
     {
         name: 'addHotel',
@@ -54,10 +54,10 @@ export const routes = [
     },
     {
         name: 'viewReservation',
-        path: '/listreservation',
+        path: '/listereservation',
         component: viewReservation
     },
- 
+
 
     {
         name: 'addReservation',
