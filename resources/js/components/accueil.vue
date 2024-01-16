@@ -2,16 +2,16 @@
 
 	<br>
 		<!-- banner bottom   -->
-		<div class="banner-bottom py-5">
-			<div class="d-md-flex container py-xl-3 py-lg-3">
-				<div class="banner-left-bottom-w3ls">
-					<h6 class="text-wh let">Sed do eiusmod tempor</h6>
-					<h3 class="text-wh my-3">Welcome to our Exceptionel Agence </h3>
-					<p>Enjoy Your Every Moments With Your Partner In Villas  Resort.<br>Sed do eiusmod tempor incididunt utlabore.</p>
-				</div>
+	<div class="banner-bottom py-5">
+    	<div class="d-md-flex container py-xl-3 py-lg-3 justify-content-center">
+        <div class="banner-left-bottom-w3ls text-center">
+            <h6 class="text-wh let">Travel To DO</h6>
+            <h3 class="text-wh my-3">Bienvenue dans notre Agence exceptionnelle.</h3>
+            <p>Profitez de chaque moment avec votre partenaire dans notre complexe de villas.<br>Découvrez des expériences inoubliables avec notre agence de voyage.</p>
+        </div>
+   		</div>
+	</div>
 
-			</div>
-		</div>
 		<!-- //banner bottom -->
 		<br>
 	<hr>
@@ -28,12 +28,11 @@
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-7 about-right offset-xl-1">
-						<h4 style="font-size: 60px; color: red;">About Us</h4>
-						<h3 class="tittle-w3layouts text-uppercase pr-lg-5 mt-2">Duis aute irure olor in cillum solore</h3>
-						<p class="mt-4 mb-4">Lorem ipsum dolor sit amet Neque porro quisquam est qui dolorem Lorem int ipsum dolor sit
-							amet id tempor felis. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit.</p>
-						<a href="about.html" class="btn button-style-2 mt-sm-5 mt-4">Read More</a>
+						<h4 style="font-size: 60px; color: red;">À propos de nous</h4>
+						<p class="mt-4 mb-4">Notre agence de voyage va au-delà des simples destinations exotiques, en se dédiant à la création d'expériences exceptionnelles qui dépassent les attentes. 
+							Grâce à un mélange unique de professionnalisme et de passion, nous personnalisons chaque voyage selon les désirs de nos clients.</p>
+						<p> Avec une équipe dédiée et une attention aux détails, chaque itinéraire devient une aventure mémorable, promettant des découvertes extraordinaires et d'inoubliables souvenirs.</p>
+						<a href="" class="btn button-style-2 mt-sm-5 mt-4">Read More</a>
 					</div>
 
 				</div>
@@ -56,7 +55,7 @@
 								</div>
 								<div class="col-8">
 									<h4 class="numscroller">6000</h4>
-									<p>Excellent Ratings</p>
+									<p>Excellentes évaluations</p>
 								</div>
 							</div>
 						</div>
@@ -69,7 +68,7 @@
 								</div>
 								<div class="col-8">
 									<h4 class="numscroller">25k</h4>
-									<p>Happy Guests</p>
+									<p>Clients Satisfaits</p>
 								</div>
 							</div>
 						</div>
@@ -82,7 +81,7 @@
 								</div>
 								<div class="col-8">
 									<h4 class="numscroller">150</h4>
-									<p>Food Items</p>
+									<p>Articles Alimentaires</p>
 								</div>
 							</div>
 						</div>
@@ -99,7 +98,7 @@
 			<!-- price -->
 		<div class="rooms-w3ls bg-li py-5" id="price">
 			<div class="container-fluid py-xl-5 py-lg-3">
-				<h3 class="tittle text-center text-bl font-weight-bold">Our hotels</h3>
+				<h3 class="tittle text-center text-bl font-weight-bold">Nos hotels</h3>
 				<br>
 				<div class="container text-center">
     <div class="row">
@@ -156,12 +155,12 @@
 				<div class="row">
 					<div class="col-lg-4 price-mobamus">
 						<div class="price-top">
-							<a href="https://www.goldenyasmin.com/fr/mehari-tabarka/">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/sea-view.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.goldenyasmin.com/fr/mehari-tabarka/">Mehari Tabarka</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">Mehari Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
@@ -171,19 +170,20 @@
 							</div>
 							<ul class="style-lists">
 								<li> enfant moins 6 ans gratuit </li>
+								<li>Conciergerie VIP pour des recommandations personnalisées</li>
 								<li>Logement Petit Déjeuner </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 					<div class="col-lg-4 price-mobamus my-lg-0 my-5">
 						<div class="price-top">
-							<a href="single.html">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/hotel2.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="single.html">Itropika</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html">Itropika</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
@@ -193,19 +193,20 @@
 							</div>
 							<ul class="style-lists">
 								<li> enfant moins 6 ans gratuit </li>
+								<li>Accès privilégié à des activités exclusives dans la région</li>
 								<li>Logement Petit Déjeuner </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 					<div class="col-lg-4 price-mobamus">
 						<div class="price-top">
-							<a href="single.html">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/hotel3.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="single.html">Marina Prestige Tabarka</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html">Marina Prestige Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
@@ -215,10 +216,10 @@
 							</div>
 							<ul class="style-lists">
 								<li> enfant moins 6 ans gratuit </li>
+								<li>Navette gratuite vers les attractions locales</li>
 								<li>Logement Petit Déjeuner </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-							<!--<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>-->
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 				</div>
@@ -226,12 +227,12 @@
 				<div class="row">
 					<div class="col-lg-4 price-mobamus">
 						<div class="price-top">
-							<a href="single.html">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/tropica.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="single.html">Dar Ismail</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html">Dar Ismail</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
@@ -241,19 +242,20 @@
 							</div>
 							<ul class="style-lists">
 								<li> enfant moins 6 ans gratuit </li>
+								<li>Accès Wi-Fi gratuit</li>
 								<li>Logement Petit Déjeuner </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 					<div class="col-lg-4 price-mobamus my-lg-0 my-5">
 						<div class="price-top">
-							<a href="single.html">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/La Cigale Tabarka.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="single.html">La Cigale Tabarka</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html">La Cigale Tabarka</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
@@ -262,34 +264,34 @@
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li> enfant moins 6 ans gratuit </li>
+								<li>Deux lits doubles </li>
 								<li>Logement Petit Déjeuner </li>
-                                <li>1 free bed available on request</li>
-
+								<li>Possibilité de choisir une chambre avec vue sur la mer </li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 					<div class="col-lg-4 price-mobamus">
 						<div class="price-top">
-							<a href="single.html">
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/Les Mimosas.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="single.html">Les Mimosas</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html">Les Mimosas</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
 									<span class="price-midd-head">182</span>
-									<span class="price-right-head">/ per month</span>
+									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
 							<ul class="style-lists">
-								<li>Two double beds </li>
-								<li>Babysitting facilities</li>
+								<li> enfant moins 6 ans gratuit </li>
+								<li> lit gratuit disponible sur demande</li>
+								<li>Service de garde d'enfants</li>
 							</ul>
-							<a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
+							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
 				</div>
@@ -303,9 +305,8 @@
 		<!-- services -->
 		<div class="serives-mobamu py-5" id="services">
 			<div class="container py-xl-5 py-lg-3">
-				<h3 class="tittle text-center text-wh font-weight-bold">Our Services</h3>
-				<p class="sub-tittle text-center text-li mt-2 mb-sm-5 mb-4 pb-xl-3">Sed do eiusmod tempor incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+				<h3 class="tittle text-center text-wh font-weight-bold">Nos Services</h3>
+				<h4 class="sub-tittle text-center text-li mt-2 mb-sm-5 mb-4 pb-xl-3">Nos services sont pensés pour offrir des expériences uniques, façonnant chaque voyage en un souvenir mémorable</h4>
 				<div class="row welcome-bottom text-center">
 					<div class="col-lg-3 col-sm-6 px-2">
 						<div class="welcome-grid bg-wh py-5 px-4">
@@ -348,27 +349,25 @@
     <div class="middle py-5">
       <div class="container py-xl-5 py-lg-3">
         <div class="welcome-left text-center py-md-5 py-3">
-          <h3>Enjoy Your Every Moments With Your Partner In Our Hotels Resort</h3>
-          <router-link to="/Addreservation" class="btn button-style-2 mt-sm-5 mt-4">Book Now</router-link>
+          <h3>Profitez de chaque instant avec votre partenaire dans notre complexe hôtelier</h3>
+          <router-link to="/Addreservation" class="btn button-style-2 mt-sm-5 mt-4">Réservez</router-link>
         </div>
       </div>
     </div>
   </div>
 		<!-- //middle -->
 
-		<!-- newsletter -->
+		<!--- newsletter --->
 		<div class="newsletter_w3w3pvt py-5">
 			<div class="container py-xl-5 py-lg-3">
-				<h3 class="tittle text-center text-bl font-weight-bold">Subscribe Newsletter</h3>
-				<p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3">Sed do eiusmod tempor incididunt ut labore et dolore
-					magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+				<h3 class="tittle text-center text-bl font-weight-bold">Inscrivez-vous à notre newsletter</h3> <br>
+				<p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3">N'hésitez pas à nous envoyer un e-mail si vous avez des questions. Nous sommes là pour vous aider et répondre à toutes vos préoccupations</p>
 				<div class="newsletter">
-					<form action="#" method="post">
+					<form action="mailto:info@example.com" method="post">
 						<div class="form-group mb-0 w-100">
 							<input class="email" type="email" name="email" placeholder="Your email..." required="">
 						</div>
-						<button type="submit" class="btn">Subscribe</button>
+						<button type="submit" class="btn">Inscrivez</button>
 					</form>
 				</div>
 			</div>
@@ -390,22 +389,22 @@
 						<!-- //Map -->
 					</div>
 					<div class="col-lg-2 col-md-6 footer-grid_section_1its mt-md-0 mt-4">
-						<h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Links</h3>
+						<h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Liens</h3>
 						<ul class="list-unstyled">
 							<li class="mb-3">
-								<a href="index.html">Home</a>
+								<a href="index.html">Acceuil</a>
 							</li>
 							<li class="mb-3">
-								<a href="about.html">About Us</a>
+								<a href="about.html">A propos Nous</a>
 							</li>
 							<li class="mb-3">
-								<a href="gallery.html">Gallery</a>
+								<a href="gallery.html">Galerie</a>
 							</li>
 							<li class="mb-3">
 								<a href="#services">Services</a>
 							</li>
 							<li class="mb-3">
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.html">Contactez nous</a>
 							</li>
 						</ul>
 					</div>
@@ -413,16 +412,16 @@
 						<h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Contact Info</h3>
 						<div class="contact-info">
 							<div class="footer-style-w3ls mb-4">
-								<h4 class="text-li mb-2">Phone</h4>
-								<p>+121 098 8907 9987</p>
+								<h4 class="text-li mb-2">Télephone</h4>
+								<p>+216 74 907 987</p>
 							</div>
 							<div class="footer-style-w3ls mb-4">
 								<h4 class="text-li mb-2">Email </h4>
 								<p><a href="mailto:info@example.com">info@example.com</a></p>
 							</div>
 							<div class="footer-style-w3ls mb-4">
-								<h4 class="text-li mb-2">Location</h4>
-								<p>Honey Avenue, New York City</p>
+								<h4 class="text-li mb-2">Où nous trouver</h4>
+								<p>Sfax route Manzel Chakker</p>
 							</div>
 						</div>
 					</div>
@@ -430,8 +429,8 @@
 						<!-- social icons -->
 						<div class="mobamuinfo_social_icons">
 							<h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Social Info</h3>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<h4 class="sub-con-fo text-li my-4">Catch on Social</h4>
+							<p>Restez connecté avec nous à travers nos réseaux sociaux pour les dernières mises à jour et informations passionnantes.</p>
+							<h4 class="sub-con-fo text-li my-4">Suivez-nous sur les réseaux sociaux</h4>
 							<ul class="mobamuits_social_list list-unstyled">
 								<li class="w3_mobamu_facebook">
 									<a href="#">
@@ -461,10 +460,7 @@
 			</div>
 		</footer>
 		<!-- //footer -->
-		<!-- copyright -->
-		<div class="cpy-right text-center py-3">
-			<p>© 2023 All rights reserved | Design by wiem & sirine</p>
-		</div>
+	
 
 	</template>
 	<script>
