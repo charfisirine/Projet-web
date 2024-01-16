@@ -4,7 +4,7 @@
       <h3 style="text-align: center;">Dashboard Admin</h3>
       <br>
 
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-2">
           <router-link to="/Addhotel" class="nav-item nav-link">
             <div class="square">

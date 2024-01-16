@@ -29,10 +29,10 @@
 					</div>
 					<div class="col-xl-6 col-lg-7 about-right offset-xl-1">
 						<h4 style="font-size: 60px; color: red;">À propos de nous</h4>
-						<p class="mt-4 mb-4">Notre agence de voyage va au-delà des simples destinations exotiques, en se dédiant à la création d'expériences exceptionnelles qui dépassent les attentes. 
+						<p class="mt-4 mb-4">Notre agence de voyage va au-delà des simples destinations exotiques, en se dédiant à la création d'expériences exceptionnelles qui dépassent les attentes.
 							Grâce à un mélange unique de professionnalisme et de passion, nous personnalisons chaque voyage selon les désirs de nos clients.</p>
 						<p> Avec une équipe dédiée et une attention aux détails, chaque itinéraire devient une aventure mémorable, promettant des découvertes extraordinaires et d'inoubliables souvenirs.</p>
-						<a href="" class="btn button-style-2 mt-sm-5 mt-4">Read More</a>
+						<a href="" class="btn button-style-2 mt-sm-5 mt-4">Lire la suite</a>
 					</div>
 
 				</div>
@@ -100,71 +100,36 @@
 			<div class="container-fluid py-xl-5 py-lg-3">
 				<h3 class="tittle text-center text-bl font-weight-bold">Nos hotels</h3>
 				<br>
-				<div class="container text-center">
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="nav nav-tabs nav-fill nav-tabs-zone mb-4" id="myTab">
-                <li class="nav-item">
-                    <a class="nav-link btn active" data-toggle="tab" href="#zone_1_tabarka">Tabarka</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn" data-toggle="tab" href="#zone_1_hammamet">Hammamet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn" data-toggle="tab" href="#zone_1_sousse">Sousse</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn" data-toggle="tab" href="#zone_1_djerba">Djerba</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn" data-toggle="tab" href="#zone_1_monastir">Monastir</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn" data-toggle="tab" href="#zone_1_mahdia">Mahdia</a>
-                </li>
-            </ul>
-
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane active" id="zone_1_tabarka">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr">
-                        <!-- Add your hotel list content for tbarka here -->
-                </div>
-                <div class="tab-pane" id="zone_1_hammamet">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
-                </div>
-                <div class="tab-pane" id="zone_1_sousse">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
-                </div>
-                <div class="tab-pane" id="zone_1_djerba">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
-                </div>
-                <div class="tab-pane" id="zone_1_monastir">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
-                </div>
-                <div class="tab-pane" id="zone_1_mahdia">
-                    <div class="w-screen lg:w-full mx-5 lg:mx-0 relative" dir="ltr"></div>
+		<div class=" text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs nav-fill nav-tabs-zone mb-4" id="myTab">
+                        <li v-for="(region, index) in state.regions" :key="index" class="nav-item">
+                        <a @click.prevent="state.selectedTab = region.id" :class="{ 'nav-link': true, 'btn': true, 'active': selectedTab === region.id }" href="#">
+                            {{ region.name }}
+                        </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 </div>
 
 
 					<br>
 				<div class="row">
-					<div class="col-lg-4 price-mobamus">
+					<div class="col-lg-4 price-mobamus"  v-for="item in state.hotelList.filter(h => h.adresse === state.selectedTab)" :key="item.id">
 						<div class="price-top">
 							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">
 								<img src="../../assets/images/sea-view.jpg" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">Mehari Tabarka</a></h4>
+							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">{{ item.nomhotel }}</a></h4>
 							<div class="lm-item-price">
 								<h6>
 									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">120</span>
+									<span class="price-midd-head">{{ item.prixnuit }}</span>
 									<span class="price-right-head">/ par nuit</span>
 								</h6>
 							</div>
@@ -176,127 +141,8 @@
 							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
 						</div>
 					</div>
-					<div class="col-lg-4 price-mobamus my-lg-0 my-5">
-						<div class="price-top">
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/hotel2.jpg" alt="" class="img-fluid" />
-							</a>
-						</div>
-						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html">Itropika</a></h4>
-							<div class="lm-item-price">
-								<h6>
-									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ par nuit</span>
-								</h6>
-							</div>
-							<ul class="style-lists">
-								<li> enfant moins 6 ans gratuit </li>
-								<li>Accès privilégié à des activités exclusives dans la région</li>
-								<li>Logement Petit Déjeuner </li>
-							</ul>
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d672426-Reviews-Hotel_Itropika_Beach-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-						</div>
-					</div>
-					<div class="col-lg-4 price-mobamus">
-						<div class="price-top">
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/hotel3.jpg" alt="" class="img-fluid" />
-							</a>
-						</div>
-						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html">Marina Prestige Tabarka</a></h4>
-							<div class="lm-item-price">
-								<h6>
-									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ par nuit</span>
-								</h6>
-							</div>
-							<ul class="style-lists">
-								<li> enfant moins 6 ans gratuit </li>
-								<li>Navette gratuite vers les attractions locales</li>
-								<li>Logement Petit Déjeuner </li>
-							</ul>
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d8730457-Reviews-Marina_Prestige_Tabarka-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-lg-4 price-mobamus">
-						<div class="price-top">
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/tropica.jpg" alt="" class="img-fluid" />
-							</a>
-						</div>
-						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html">Dar Ismail</a></h4>
-							<div class="lm-item-price">
-								<h6>
-									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ par nuit</span>
-								</h6>
-							</div>
-							<ul class="style-lists">
-								<li> enfant moins 6 ans gratuit </li>
-								<li>Accès Wi-Fi gratuit</li>
-								<li>Logement Petit Déjeuner </li>
-							</ul>
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d635001-Reviews-Hotel_Dar_Ismail-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-						</div>
-					</div>
-					<div class="col-lg-4 price-mobamus my-lg-0 my-5">
-						<div class="price-top">
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/La Cigale Tabarka.jpg" alt="" class="img-fluid" />
-							</a>
-						</div>
-						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html">La Cigale Tabarka</a></h4>
-							<div class="lm-item-price">
-								<h6>
-									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">120</span>
-									<span class="price-right-head">/ par nuit</span>
-								</h6>
-							</div>
-							<ul class="style-lists">
-								<li>Deux lits doubles </li>
-								<li>Logement Petit Déjeuner </li>
-								<li>Possibilité de choisir une chambre avec vue sur la mer </li>
-							</ul>
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d7309360-Reviews-La_Cigale_Tabarka_Hotel_Thalasso_Spa_Golf-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-						</div>
-					</div>
-					<div class="col-lg-4 price-mobamus">
-						<div class="price-top">
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/Les Mimosas.jpg" alt="" class="img-fluid" />
-							</a>
-						</div>
-						<div class="price-w3ls-bottom p-4">
-							<h4 class="my-2"><a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html">Les Mimosas</a></h4>
-							<div class="lm-item-price">
-								<h6>
-									<span class="price-top-head">TND</span>
-									<span class="price-midd-head">182</span>
-									<span class="price-right-head">/ par nuit</span>
-								</h6>
-							</div>
-							<ul class="style-lists">
-								<li> enfant moins 6 ans gratuit </li>
-								<li> lit gratuit disponible sur demande</li>
-								<li>Service de garde d'enfants</li>
-							</ul>
-							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d596458-Reviews-Les_Mimosas-Tabarka_Jendouba_Governorate.html" class="btn button-style-2 mt-sm-5 mt-4">Voir l'offre</a>
-						</div>
-					</div>
 				</div>
 			</div>
-		</div>
 		<!-- //price -->
 		<br>
 
@@ -460,56 +306,49 @@
 			</div>
 		</footer>
 		<!-- //footer -->
-	
+
 
 	</template>
-	<script>
-	
+	<script setup>
+       import { ref, onMounted, reactive } from 'vue';
+        import axios from 'axios';
 
-
-
-
-		export default {
-		mounted() {
-		console.log('Component mounted.')
-		}
-		}
-
-		addEventListener("load", function () {
-		setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-		window.scrollTo(0, 1);
-		}
-        // liste des hotel selon leur ville
-        document.addEventListener("DOMContentLoaded", function () {
-        const tabSousse = document.getElementById("tab_sousse");
-
-        tabSousse.addEventListener("click", function () {
-            // Add logic to fetch and display the list of hotels for Sousse
-            const sousseHotelListContainer = document.getElementById("zone_1_sousse");
-
-            // Replace this with actual logic to fetch hotel data from an API or other source
-            // For simplicity, using a hardcoded list here
-            const hotelsInSousse = [
-                "Hotel 1 - Sousse",
-                "Hotel 2 - Sousse",
-                "Hotel 3 - Sousse",
-            ];
-
-            // Construct the HTML for the hotel list
-            const hotelListHTML = `
-                <h4>List of Hotels in Sousse</h4>
-                <ul>
-                    ${hotelsInSousse.map(hotel => `<li>${hotel}</li>`).join('')}
-                </ul>
-            `;
-
-            // Update the content of the Sousse hotel list container
-            sousseHotelListContainer.innerHTML = hotelListHTML;
+        const state = reactive({
+        hotelList: [],
+        selectedTab: null,
+        regions: [
+            { id: 'tabarka', name: 'Tabarka' },
+            { id: 'hammamet', name: 'Hammamet' },
+            { id: 'sousse', name: 'Sousse' },
+            { id: 'djerba', name: 'Djerba' },
+            { id: 'monastir', name: 'Monastir' },
+            { id: 'mahdia', name: 'Mahdia' },
+        ],
         });
-    });
+
+        const fetchHotelList = async () => {
+        try {
+            const response = await axios.get('http://localhost:8000/api/hotels');
+            state.hotelList = response.data;
+        } catch (err) {
+            console.error(err);
+            alert(err);
+        }
+        };
+
+        onMounted(fetchHotelList);
+
+        const getHotelsByRegion = () => {
+        // Fetch and update the hotel list based on the selected region
+        fetchHotelList();
+        };
+
+        onMounted(() => {
+        // Set the default selected tab to the ID of the first region
+        state.selectedTab = state.regions[0].id;
+        // Initialize the hotel list based on the default selected region
+        getHotelsByRegion();
+        });
 
 		</script>
 		<style>

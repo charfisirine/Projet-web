@@ -24,7 +24,7 @@
                   </thead>
                   <tbody>
                     <tr v-for="reservation in reservations" :key="reservation.id">
-                      <td class="text-xs font-weight-bold mb-0">{{ reservation.hotelID }}</td>
+                      <td class="text-xs font-weight-bold mb-0">{{ reservation.hotels.nomhotel }}</td>
                       <td class="text-xs font-weight-bold mb-0">{{ reservation.type }}</td>
                       <td class="align-middle text-center text-sm">{{ reservation.nom }}</td>
                       <td class="align-middle text-center text-sm">{{ reservation.prenom }}</td>
@@ -89,5 +89,5 @@
     padding: 100px; /* Ajustez la valeur pour augmenter ou diminuer la taille de l'image */
 }
 
-  
+
   </style>
