@@ -7,53 +7,66 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <form @submit.prevent="updateReservation" class="border p-4">
-            <div class="mb-3">
-              <label for="hotelID" class="form-label">Nom hotel</label>
-              <select class="form-control" id="hotelID" v-model="reservation.hotelID">
-                <option v-for="hotel in hotels" :key="hotel.id" :value="hotel.id">{{ hotel.nomhotel }}</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="type" class="form-label">Type</label>
-              <select class="form-select" id="type" v-model="reservation.type">
-                <option value="Simple">Simple</option>
-                <option value="Double">Double</option>
-                <option value="Suite">Suite</option>
-                <option value="Familiale">Familiale</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="nom" class="form-label">Nom </label>
-              <input type="text" class="form-control" id="nom" v-model="reservation.nom">
-            </div>
-            <div class="mb-3">
-              <label for="prenom" class="form-label">Prenom</label>
-              <input type="text" class="form-control" id="prenom" v-model="reservation.prenom">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" v-model="reservation.email">
-            </div>
-            <div class="mb-3">
-              <label for="numero_tel" class="form-label">Numero telephone</label>
-              <input type="number" class="form-control" id="numero_tel" v-model="reservation.numero_tel">
-            </div>
-            <div class="mb-3">
-              <label for="date_debut" class="form-label">Date Debut</label>
-              <input type="date" class="form-control" id="date_debut" v-model="reservation.date_debut">
-            </div>
-            <div class="mb-3">
-              <label for="date_fin" class="form-label">Date Fin</label>
-              <input type="date" class="form-control" id="date_fin" v-model="reservation.date_fin">
-            </div>
-            <div class="mb-3">
-              <label for="nombre_personnes" class="form-label">Nombre personnes</label>
-              <input type="number" class="form-control" id="nombre_personnes" v-model="reservation.nombre_personnes">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" v-model="reservation.message"></textarea>
-            </div>
+            <div class="row">
+                            <div class="col-lg-6 form-group">
+                        <label for="hotelID" class="form-label">Nom hotel</label>
+                        <select class="form-control" id="hotelID" v-model="reservation.hotelID" required="">
+                        <option v-for="hotel in hotels" :key="hotel.id" :value="hotel.id">{{ hotel.nomhotel }}</option>
+                        </select>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label for="type" class="form-label">Type</label>
+                                <select class="form-select" id="type" v-model="reservation.type" required="">
+                                <option value="Simple">Simple</option>
+                                <option value="Double">Double</option>
+                                <option value="Suite">Suite</option>
+                                <option value="Familiale">Familiale</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 form-group">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Nom" v-model="reservation.nom" required="">
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label for="prenom" class="form-label">Prenom</label>
+                                 <input type="text" class="form-control" id="prenom" placeholder="Prenom" v-model="reservation.prenom" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email" v-model="reservation.email" required="">
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label for="numero_tel" class="form-label">Numero telephone</label>
+                                <input type="number" class="form-control" id="numero_tel" placeholder="Phone Number" v-model="reservation.numero_tel" required="">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 form-group date-plu">
+                                <label for="date_debut" class="form-label">Date Debut</label>
+                                <input type="date" class="form-control" id="date_debut" required="" v-model="reservation.date_debut">
+                            </div>
+                            <div class="col-lg-6 form-group date-plu">
+                                <label for="date_fin" class="form-label">Date Fin</label>
+                                <input type="date" class="form-control" id="date_fin" required="" v-model="reservation.date_fin">
+                            </div>
+
+                        </div>
+                     
+                        <div class="col-12 form-group">
+                            <label for="nombre_personnes" class="form-label">Nombre personnes</label>
+                            <input type="number" class="form-control" id="nombre_personnes" v-model="reservation.nombre_personnes">
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" v-model="reservation.message"></textarea>
+                        </div> <br>
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
