@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChambreController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,11 @@ Route::middleware('api')->group(function () {
  Route::middleware('api')->group(function () {
  Route::resource('typecham_suites', TypechamSuiteController::class);
  });
+
+ Route::post('/login', [LoginController::class, 'login']);
+Route::post('/register', [RegisterController::class, 'register']);
+
+Route::middleware('auth:sanctum')->post('/logout', [LoginController::class,'logout']);
 
 // Route::get('/res/{idres}',
 // [ReservationController::class,'showReservationByCAT']);
