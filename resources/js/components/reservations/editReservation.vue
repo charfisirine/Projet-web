@@ -4,9 +4,10 @@
       <h3 class="text-center mt-4 mb-4">Modifier Réservation</h3>
 
       <!-- Formulaire -->
-      <div class="row justify-content-center">
+
+      <div class="row justify-content-center register-w3 ">
         <div class="col-md-6">
-          <form @submit.prevent="updateReservation" class="border p-4">
+          <form @submit.prevent="updateReservation" class="border p-4 form-background">
             <div class="row">
                             <div class="col-lg-6 form-group">
                         <label for="hotelID" class="form-label">Nom hotel</label>
@@ -116,3 +117,13 @@
     await fetchReservation();
   });
   </script>
+  <style scoped>
+  
+  
+  .register-w3 {
+    background: url('../../../assets/images/mer.jpg') center center/cover no-repeat;
+    padding: 120px; /* Ajustez la valeur de la marge intérieure selon vos besoins */
+
+}
+ 
+   </style>

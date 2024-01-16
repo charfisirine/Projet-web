@@ -128,10 +128,12 @@
 
   <style scoped>
  .btn-reserve {
-    padding: 8px 12px !important; /* Ajustez la taille de la police selon vos besoins */
-    /* Autres styles spécifiques au bouton "Réservez" */
+    padding: 8px 12px !important; 
   }
-  
+  .register-w3 {
+    background: url('../../../assets/images/mer.jpg') center center/cover no-repeat;
+    padding: 300px; /* Ajustez la valeur de la marge intérieure selon vos besoins */
+  }
  
 
   </style>

@@ -85,5 +85,9 @@
   /* Ajoutez vos styles spécifiques ici si nécessaire */
   .container {
     margin-top: 20px;
-  }
+    background: url('../../../assets/images/mer.jpg') center center/cover no-repeat;
+    padding: 100px; /* Ajustez la valeur pour augmenter ou diminuer la taille de l'image */
+}
+
+  
   </style>
