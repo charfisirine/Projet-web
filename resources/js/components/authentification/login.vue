@@ -26,6 +26,13 @@
             <br/>
             <div class="row">
                 <div class="col-lg-12">
+                    <p>Vous n'avez pas un compte?<router-link to="/register" class="nav-item nav-link">Inscrivez vous</router-link>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
                     <button type="submit" class="btn btn-primary" @click="handleLogin">Login</button>
                 </div>
             </div>

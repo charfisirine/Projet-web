@@ -55,22 +55,22 @@
                             </div>
 
                         </div>
-                     
+
                         <div class="col-12 form-group">
                             <label for="nombre_personnes" class="form-label">Nombre personnes</label>
                             <input type="number" class="form-control" id="nombre_personnes" v-model="reservation.nombre_personnes">
                         </div>
 
-                        
+
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" v-model="reservation.message"></textarea>
                         </div> <br>
-                       
+
                         <button type="submit" class="btn btn-outline-primary btn-reserve">Réservez</button>
-                       <router-link to="/listreservation" class="btn btn-outline-danger mx-2">Cancel</router-link>
+                       <router-link to="/" class="btn btn-outline-danger mx-2">Cancel</router-link>
                 </form>
-                       
+
                 </div>
             </div>
         </div>
@@ -128,13 +128,12 @@
 
   <style scoped>
  .btn-reserve {
-    padding: 8px 12px !important; 
+    padding: 8px 12px !important;
   }
   .register-w3 {
     background: url('../../../assets/images/mer.jpg') center center/cover no-repeat;
     padding: 300px; /* Ajustez la valeur de la marge intérieure selon vos besoins */
   }
- 
+
 
   </style>
-  
