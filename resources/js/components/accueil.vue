@@ -7,7 +7,7 @@
         <div class="banner-left-bottom-w3ls text-center">
             <h6 class="text-wh let">Travel To DO</h6>
             <h3 class="text-wh my-3">Bienvenue dans notre Agence exceptionnelle.</h3>
-            <p>Profitez de chaque moment avec votre partenaire dans notre complexe de villas.<br>Découvrez des expériences inoubliables avec notre agence de voyage.</p>
+            <p>Profitez de chaque moment avec votre partenaire dans notre Large choix des hotels.<br>Découvrez des expériences inoubliables avec notre agence de voyage.</p>
         </div>
    		</div>
 	</div>
@@ -226,7 +226,7 @@
 				<div class="row footer-top">
 					<div class="col-lg-4 col-md-6 footer-grid_section_1its">
 						<h2 class="logo-2 mb-lg-4 mb-3">
-							<a href="index.html" class="text-uppercase text-wh">Villas</a>
+							<a href="index.html" class="text-uppercase text-wh">Maps</a>
 						</h2>
 						<!-- Map -->
 						<div class="map-fo">

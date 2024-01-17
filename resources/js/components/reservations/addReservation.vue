@@ -5,7 +5,7 @@
             <h3 class="tittle text-center text-bl font-weight-bold">Réservez-vous</h3>
             <div class="comment-top mt-5">
                 <div class="comment-bottom mobamuinfo_mail_grid_right">
-                    <form @submit.prevent="addReservation">
+                    <form class="formulaire" @submit.prevent="addReservation">
                         <div class="row">
                             <div class="col-lg-6 form-group">
                         <label for="hotelID" class="form-label">Nom hotel</label>
@@ -131,9 +131,14 @@
     padding: 8px 12px !important;
   }
   .register-w3 {
-    background: url('../../../assets/images/mer.jpg') center center/cover no-repeat;
+    background: url('../../../assets/images/back.jpg') center center/cover no-repeat;
     padding: 300px; /* Ajustez la valeur de la marge intérieure selon vos besoins */
   }
-
+  .comment-bottom{
+    background: rgb(149, 197, 253);
+  }
+.container{
+    padding-top: 0.1px;
+}
 
   </style>
