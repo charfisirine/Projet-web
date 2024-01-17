@@ -121,7 +121,7 @@
 					<div class="col-lg-4 price-mobamus"  v-for="item in state.hotelList.filter(h => h.adresse === state.selectedTab)" :key="item.id">
 						<div class="price-top">
 							<a href="https://www.tripadvisor.com/Hotel_Review-g297953-d472218-Reviews-Mehari_Tabarka-Tabarka_Jendouba_Governorate.html">
-								<img src="../../assets/images/sea-view.jpg" alt="" class="img-fluid" />
+                                <img :src="item.imagehotel" alt="" class="img-fluid" />
 							</a>
 						</div>
 						<div class="price-w3ls-bottom p-4">
@@ -272,35 +272,37 @@
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 footer-grid_section_1its mt-lg-0 mt-4">
-						<!-- social icons -->
-						<div class="mobamuinfo_social_icons">
-							<h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Social Info</h3>
-							<p>Restez connecté avec nous à travers nos réseaux sociaux pour les dernières mises à jour et informations passionnantes.</p>
-							<h4 class="sub-con-fo text-li my-4">Suivez-nous sur les réseaux sociaux</h4>
-							<ul class="mobamuits_social_list list-unstyled">
-								<li class="w3_mobamu_facebook">
-									<a href="#">
-										<span class="fa fa-facebook-f"></span>
-									</a>
-								</li>
-								<li class="w3_mobamu_twitter">
-									<a href="#">
-										<span class="fa fa-twitter"></span>
-									</a>
-								</li>
-								<li class="w3_mobamu_dribble">
-									<a href="#">
-										<span class="fa fa-dribbble"></span>
-									</a>
-								</li>
-								<li class="w3_mobamu_google">
-									<a href="#">
-										<span class="fa fa-google-plus"></span>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- social icons -->
+                    <!-- social icons -->
+                    <div class="mobamuinfo_social_icons">
+                        <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Social Info</h3>
+                        <p>Restez connecté avec nous à travers nos réseaux sociaux pour les dernières mises à jour et informations passionnantes.</p>
+                        <h4 class="sub-con-fo text-li my-4">Suivez-nous sur les réseaux sociaux</h4>
+                        <ul class="mobamuits_social_list list-unstyled">
+                            <li class="w3_mobamu_facebook">
+                                <a href="#">
+                                    <span class="bi bi-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="w3_mobamu_twitter">
+                                <a href="#">
+                                    <span class="bi bi-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="w3_mobamu_dribble">
+                                <a href="#">
+                                    <span class="bi bi-dribbble"></span>
+                                </a>
+                            </li>
+                            <li class="w3_mobamu_google">
+                                <a href="#">
+                                    <span class="bi bi-google"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- social icons -->
+
+
 					</div>
 				</div>
 			</div>

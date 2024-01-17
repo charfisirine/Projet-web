@@ -1,5 +1,6 @@
 <template>
-    <div>
+
+    <div class="background-container">
         <br>
       <h3 style="text-align: center;">Dashboard Admin</h3>
       <br>
@@ -56,7 +57,7 @@
   .square {
     width: 100%; /* La largeur est maintenant de 100%, chaque carré occupe la moitié de la largeur de la colonne */
     height: 200px; /* Remplacez la hauteur par celle que vous souhaitez */
-    background-color: #3498db; /* Couleur de fond du carré, remplacez par la couleur que vous souhaitez */
+    background-color: #f99d12; /* Couleur de fond du carré, remplacez par la couleur que vous souhaitez */
     margin: 10px; /* Marge autour du carré, ajustez selon vos besoins */
     display: flex;
     align-items: center;
@@ -64,5 +65,11 @@
     text-align: center;
     color: white; /* Couleur du texte dans le carré, ajustez selon vos besoins */
     font-weight: bold;
+  }
+  .background-container {
+    height: 100vh;
+    background-image: url('../../../assets/images/back.jpg');
+    background-size: cover;
+    background-position: center;
   }
   </style>

@@ -135,7 +135,7 @@
     padding: 300px; /* Ajustez la valeur de la marge intérieure selon vos besoins */
   }
   .comment-bottom{
-    background: rgb(149, 197, 253);
+    background: rgb(55, 147, 252);
   }
 .container{
     padding-top: 0.1px;
