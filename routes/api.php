@@ -37,9 +37,13 @@ Route::middleware('api')->group(function () {
  Route::middleware('api')->group(function () {
  Route::resource('typecham_suites', TypechamSuiteController::class);
  });
+ Route::middleware('api')->group(function($router) {
 
+ Route::post('/createpayment', [PaymentController::class,'createPaymentIntent']); // methode createPaymentIntent
+            
+  });
 
- Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [RegisterController::class, 'register']);
 
 Route::middleware('auth:sanctum')->post('/logout', [LoginController::class,'logout']);

@@ -1,17 +1,20 @@
 <template>
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse">
-          <div class="navbar-nav">
-            <router-link to="/" class="nav-item nav-link">Accueil</router-link>
-            <router-link to="/Addreservation" class="nav-item nav-link"> Reservation</router-link>
-            <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
-            <router-link to="/login" class="nav-item nav-link">Login</router-link>
-            <router-link to="/register" class="nav-item nav-link">Register</router-link>
-            <li class="nav-item"><button @click="logout" class="nav-link">Logout</button></li>
-          </div>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+        <router-link to="/" class="nav-item nav-link">Accueil</router-link>
+        <router-link to="/Addreservation" class="nav-item nav-link">Reservation</router-link>
+        <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
+      </div>
+    </div>
+
+    <!-- Nouvelle div pour les liens "Login" et "Logout" -->
+    <div class="navbar-nav">
+      <router-link to="/login" class="nav-item nav-link">Login</router-link>
+      <button @click="logout" class="nav-link">Logout</button>
+    </div>
+  </nav>
       <router-view></router-view>
     </div>
   </template>
@@ -37,7 +40,7 @@ console.log(response)
 localStorage.removeItem('token')
 localStorage.removeItem('user')
 
-11
+
 router.push("/login")
 })
 .catch(err => {console.log(err);alert(err) })
@@ -45,3 +48,12 @@ router.push("/login")
 }
 </script>
 
+<style scoped>
+  .nav-item {
+    margin-right: 30px; /* Ajustez la valeur selon vos préférences */
+  }
+
+  .nav-item:last-child {
+    margin-right: 0; /* Supprime la marge pour le dernier élément */
+  }
+</style>

@@ -14,6 +14,7 @@ import editReservation from './components/reservations/editReservation.vue';
 import Login from './components/authentification/login.vue'
 import Register from './components/authentification/register.vue'
 import Dashboard from './components/admin/dashboard.vue'
+import Payment from './components/reservations/Payment.vue';
 
 
 
@@ -88,5 +89,10 @@ export const routes = [
         name: 'editReservation',
         path: '/editreservation/:id',
         component: editReservation
+    },
+    {
+        path:'/payment',
+        name:'Payment',
+        component:Payment
     }
 ];
