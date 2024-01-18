@@ -18,6 +18,7 @@ import Payment from './components/reservations/Payment.vue';
 
 
 
+  
 export const routes = [
     {
         name: "login",
@@ -34,7 +35,7 @@ export const routes = [
         name: "dashboard",
         path: '/dashboard',
         component: Dashboard,
-
+        meta:{isAuth:true}
         },
     {
         name: 'accueil',
@@ -83,8 +84,8 @@ export const routes = [
     {
         name: 'addReservation',
         path: '/Addreservation',
-        component: addReservation
-    },
+        component: addReservation,
+        meta: { requiresAuth: true },    },
     {
         name: 'editReservation',
         path: '/editreservation/:id',
@@ -95,4 +96,5 @@ export const routes = [
         name:'Payment',
         component:Payment
     }
+   
 ];

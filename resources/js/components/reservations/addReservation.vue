@@ -87,6 +87,17 @@
    import axios from 'axios';
  
    const router = useRouter();
+   onMounted(() => {
+    // Vérifiez si l'utilisateur est authentifié
+    const isAuth = localStorage.getItem('token');
+
+    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    if (!isAuth) {
+        router.push('/login');
+        alert("Veuillez vous connecter ou vous inscrire avant de réserver.");
+
+    }
+});
  
    const hotels = ref([]);
  
@@ -103,6 +114,7 @@
        nombre_personnes: "",
        message: ""
    });
+   
  
    const fetchHotels = async () => {
        try {

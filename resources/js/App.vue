@@ -9,10 +9,11 @@
       </div>
     </div>
 
-    <!-- Nouvelle div pour les liens "Login" et "Logout" -->
     <div class="navbar-nav">
-      <router-link to="/login" class="nav-item nav-link">Login</router-link>
+      
       <button @click="logout" class="nav-link">Logout</button>
+          <!-- <router-link to="/login" class="nav-item nav-link">Login</router-link> -->
+          <router-link to="/login" class="nav-item nav-link">Login</router-link>
     </div>
   </nav>
       <router-view></router-view>

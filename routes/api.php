@@ -48,7 +48,8 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::middleware('auth:sanctum')->post('/logout', [LoginController::class,'logout']);
 
+Route::middleware('api')->middleware('auth:sanctum')->group(function () {
+Route::resource('reservations', ReservationController::class);
+    });
+   
 
-
-// Route::get('/res/{idres}',
-// [ReservationController::class,'showReservationByCAT']);
